@@ -16,7 +16,9 @@ public class UtilsTest {
 
     public static Stream<Arguments> testCases() {
         return Stream.of(
+                Arguments.of(new ArrayList<>(Arrays.asList("1", "2", null)), false),
                 Arguments.of(List.of(), false),
+                Arguments.of(List.of("088"), false),
                 Arguments.of(List.of("11.22", "2", "33", "87"), true),
                 Arguments.of(List.of("1", "2", "3", "4", "5"), true),
                 Arguments.of(List.of("0", "2", "3", "4", "5"), false),
